@@ -158,6 +158,7 @@ func postMessageToChat(postUrl string, message Message) error {
 	}
 
 	req.Header.Set("User-Agent", "CloudWatchToGChat/v0.0.0 (https://github.com/jamesjj/cloudwatch-to-google-chat)")
+	req.Header.Set("Content-Type", "application/json")
 
 	resp, err := client.Do(req)
 	if err != nil {
